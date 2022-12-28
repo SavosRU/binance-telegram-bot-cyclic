@@ -111,11 +111,15 @@ const replyWithIntro = (ctx: any) => {
   })
 };
 
-const replyWithButtons = (ctx: any) =>
+const replyWithButtons = (ctx: any) => {
   ctx.reply("Доступные действия:", {
     reply_markup: buttonsKeyboard,
     parse_mode: "HTML",
   });
+  console.log("Telegram Bot started!");
+  console.log("API_KEY: " + KEY);
+  console.log("API_SECRET:" + SECRET);
+};
 
 bot.command("start", replyWithIntro);
 // bot.on("message", replyWithIntro);
