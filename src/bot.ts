@@ -4,9 +4,13 @@ import ccxt from "ccxt";
 import { Bot, InlineKeyboard, webhookCallback } from "grammy";
 import express from "express";
 
+const TOKEN   = process.env.TELEGRAM_TOKEN || "";
+const KEY     = process.env.API_KEY || "";
+const SECRET  = process.env.API_SECRET || "";
+
 const binance = new ccxt.binanceusdm ({
-  apiKey: process.env.API_KEY || "",
-  secret: process.env.API_SECRET || ""
+  apiKey: KEY,
+  secret: SECRET
 });
 
 const getBalance = async () => {
@@ -53,7 +57,7 @@ const getPositions = async () => {
 }) ();
 
 // Create a bot using the Telegram token
-const bot = new Bot(process.env.TELEGRAM_TOKEN || "");
+const bot = new Bot(TOKEN);
 
 // Handle the /yo command to greet the user
 bot.command("yo", (ctx) => ctx.reply(`Yo ${ctx.from?.username}`));
