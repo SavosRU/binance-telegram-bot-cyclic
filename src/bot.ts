@@ -117,8 +117,12 @@ const replyWithButtons = (ctx: any) => {
     parse_mode: "HTML",
   });
   console.log("Telegram Bot started!");
+  console.log("***********************");
   console.log("API_KEY: " + KEY);
+  console.log("CCXT Binance API_KEY: " + binance.apiKey);
   console.log("API_SECRET:" + SECRET);
+  console.log("CCXT Binance API_SECRET:" + binance.secret);
+  console.log("***********************");
 };
 
 bot.command("start", replyWithIntro);
