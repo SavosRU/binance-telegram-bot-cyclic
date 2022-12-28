@@ -14,6 +14,13 @@ const binance = new ccxt.binanceusdm ({
 });
 
 const getBalance = async () => {
+  console.log("Checking Binance Balance...");
+  console.log("***********************");
+  console.log("API_KEY: " + KEY);
+  console.log("CCXT Binance API_KEY: " + binance.apiKey);
+  console.log("API_SECRET:" + SECRET);
+  console.log("CCXT Binance API_SECRET:" + binance.secret);
+  console.log("***********************");
   try {
     const balance = await binance.fetchBalance();
     console.log ("Balance: ", balance.USDT);
@@ -24,6 +31,13 @@ const getBalance = async () => {
 };
 
 const getOrders = async () => {
+  console.log("Checking Binance Orders...");
+  console.log("***********************");
+  console.log("API_KEY: " + KEY);
+  console.log("CCXT Binance API_KEY: " + binance.apiKey);
+  console.log("API_SECRET:" + SECRET);
+  console.log("CCXT Binance API_SECRET:" + binance.secret);
+  console.log("***********************");
   try {
     const orders = await binance.fetchOrders();
     console.log ("Orders: ", orders);
@@ -34,6 +48,13 @@ const getOrders = async () => {
 };
 
 const getPositions = async () => {
+  console.log("Checking Binance Positions...");
+  console.log("***********************");
+  console.log("API_KEY: " + KEY);
+  console.log("CCXT Binance API_KEY: " + binance.apiKey);
+  console.log("API_SECRET:" + SECRET);
+  console.log("CCXT Binance API_SECRET:" + binance.secret);
+  console.log("***********************");
   const poses = [{}];
   try {
     const positions = await binance.fetchPositions();
