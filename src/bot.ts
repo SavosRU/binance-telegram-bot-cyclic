@@ -109,6 +109,14 @@ const replyWithIntro = (ctx: any) => {
     reply_markup: buttonsKeyboard,
     parse_mode: "HTML",
   })
+  console.log("Bot have got START-command!");
+  console.log("***********************");
+  console.log("API_KEY: " + KEY);
+  console.log("CCXT Binance API_KEY: " + binance.apiKey);
+  console.log("API_SECRET:" + SECRET);
+  console.log("CCXT Binance API_SECRET:" + binance.secret);
+  console.log("***********************");
+
 };
 
 const replyWithButtons = (ctx: any) => {
@@ -168,8 +176,12 @@ if (process.env.NODE_ENV === "production") {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`Bot listening on port ${PORT}`);
+    console.log("***********************");
     console.log("API_KEY: " + KEY);
+    console.log("CCXT Binance API_KEY: " + binance.apiKey);
     console.log("API_SECRET:" + SECRET);
+    console.log("CCXT Binance API_SECRET:" + binance.secret);
+    console.log("***********************");
   });
 } else {
   // Use Long Polling for development
