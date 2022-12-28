@@ -50,11 +50,11 @@ const getPositions = async () => {
   }
 };
 
-(async function () {
-  await getBalance();
-  // await getOrders();
-  await getPositions();
-}) ();
+// (async function () {
+//   // await getBalance();
+//   // await getOrders();
+//   // await getPositions();
+// }) ();
 
 // Create a bot using the Telegram token
 const bot = new Bot(TOKEN);
